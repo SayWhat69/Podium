@@ -66,7 +66,7 @@ struct NowPlayingMetadata {
 /// making any other requests.
 final class KodiService {
 
-    private static let logger = Logger(subsystem: "com.kodiwidget", category: "KodiService")
+    private static let logger = Logger(subsystem: "com.thaesler.podium", category: "KodiService")
 
     // MARK: - Configuration
 

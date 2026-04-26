@@ -41,8 +41,11 @@ struct ContentView: View {
             .sheet(isPresented: .constant(shouldShowDeviceSheet)) {
                 NavigationStack(path: $path) {
                     SelectDeviceView(settings: settings, path: $path)
-                        .navigationDestination(for: String.self) { destination in
-                            if destination == "addDevice" {
+                        .navigationDestination(for: SettingsDestination.self) { destination in
+                            switch destination {
+                            case .devicePicker:
+                                SelectDeviceView(settings: settings, path: $path)
+                            case .addDevice:
                                 AddDeviceView(settings: settings, path: $path)
                             }
                         }

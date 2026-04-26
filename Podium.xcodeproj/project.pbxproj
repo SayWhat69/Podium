@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6359D3F52F9DA70700504DFA /* Icon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 6359D3F42F9DA70700504DFA /* Icon.icon */; };
+		6359D3FB2F9DAA9A00504DFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6359D3FA2F9DAA9A00504DFA /* LaunchScreen.storyboard */; };
 		63FE7F292F8BCA0C00F5EEA9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 63FE7F282F8BCA0C00F5EEA9 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63FE7F152F8BC99A00F5EEA9 /* Kodi Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kodi Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6359D3F42F9DA70700504DFA /* Icon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = Icon.icon; sourceTree = "<group>"; };
+		6359D3FA2F9DAA9A00504DFA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63FE7F152F8BC99A00F5EEA9 /* Podium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		63FE7F172F8BC99A00F5EEA9 /* Kodi Widget */ = {
+		63FE7F172F8BC99A00F5EEA9 /* Podium */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Kodi Widget";
+			path = Podium;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -37,7 +41,9 @@
 		63FE7F0C2F8BC99A00F5EEA9 = {
 			isa = PBXGroup;
 			children = (
-				63FE7F172F8BC99A00F5EEA9 /* Kodi Widget */,
+				6359D3FA2F9DAA9A00504DFA /* LaunchScreen.storyboard */,
+				6359D3F42F9DA70700504DFA /* Icon.icon */,
+				63FE7F172F8BC99A00F5EEA9 /* Podium */,
 				63FE7F162F8BC99A00F5EEA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,7 +51,7 @@
 		63FE7F162F8BC99A00F5EEA9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63FE7F152F8BC99A00F5EEA9 /* Kodi Widget.app */,
+				63FE7F152F8BC99A00F5EEA9 /* Podium.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,9 +59,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		63FE7F142F8BC99A00F5EEA9 /* Kodi Widget */ = {
+		63FE7F142F8BC99A00F5EEA9 /* Podium */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63FE7F222F8BC9A000F5EEA9 /* Build configuration list for PBXNativeTarget "Kodi Widget" */;
+			buildConfigurationList = 63FE7F222F8BC9A000F5EEA9 /* Build configuration list for PBXNativeTarget "Podium" */;
 			buildPhases = (
 				63FE7F112F8BC99A00F5EEA9 /* Sources */,
 				63FE7F122F8BC99A00F5EEA9 /* Frameworks */,
@@ -66,14 +72,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				63FE7F172F8BC99A00F5EEA9 /* Kodi Widget */,
+				63FE7F172F8BC99A00F5EEA9 /* Podium */,
 			);
-			name = "Kodi Widget";
+			name = Podium;
 			packageProductDependencies = (
 				63FE7F282F8BCA0C00F5EEA9 /* Kingfisher */,
 			);
-			productName = "Kodi Widget";
-			productReference = 63FE7F152F8BC99A00F5EEA9 /* Kodi Widget.app */;
+			productName = Podium;
+			productReference = 63FE7F152F8BC99A00F5EEA9 /* Podium.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +97,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 63FE7F102F8BC99A00F5EEA9 /* Build configuration list for PBXProject "Kodi Widget" */;
+			buildConfigurationList = 63FE7F102F8BC99A00F5EEA9 /* Build configuration list for PBXProject "Podium" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -108,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				63FE7F142F8BC99A00F5EEA9 /* Kodi Widget */,
+				63FE7F142F8BC99A00F5EEA9 /* Podium */,
 			);
 		};
 /* End PBXProject section */
@@ -118,6 +124,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6359D3FB2F9DAA9A00504DFA /* LaunchScreen.storyboard in Resources */,
+				6359D3F52F9DA70700504DFA /* Icon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +266,7 @@
 		63FE7F232F8BC9A000F5EEA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -266,9 +274,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Kodi-Widget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Podium for Kodi";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -276,7 +286,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.thaesler.Kodi-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thaesler.Podium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -291,7 +301,7 @@
 		63FE7F242F8BC9A000F5EEA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -299,9 +309,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Kodi-Widget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Podium for Kodi";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,7 +321,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.thaesler.Kodi-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thaesler.Podium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -324,7 +336,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		63FE7F102F8BC99A00F5EEA9 /* Build configuration list for PBXProject "Kodi Widget" */ = {
+		63FE7F102F8BC99A00F5EEA9 /* Build configuration list for PBXProject "Podium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63FE7F202F8BC9A000F5EEA9 /* Debug */,
@@ -333,7 +345,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63FE7F222F8BC9A000F5EEA9 /* Build configuration list for PBXNativeTarget "Kodi Widget" */ = {
+		63FE7F222F8BC9A000F5EEA9 /* Build configuration list for PBXNativeTarget "Podium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63FE7F232F8BC9A000F5EEA9 /* Debug */,

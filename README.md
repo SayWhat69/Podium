@@ -1,6 +1,16 @@
-# Kodi Widget
-
-A native iOS remote control for [Kodi](https://kodi.tv) — built to look and feel like Apple Music's fullscreen player. Browse what's playing, seek, switch subtitles and audio tracks, and control playback from your iPhone's Lock Screen without ever opening the app.
+<div align="center">
+  <img src="Screenshots/icon.png" width="140" alt="Podium for Kodi" style="border-radius: 32px;"/>
+  <br/><br/>
+  <img src="Screenshots/title-2.svg" alt="Podium for Kodi"/>
+  <br/>
+  <p>A native iOS remote control for <a href="https://kodi.tv">Kodi</a> — built to look and feel like Apple Music's fullscreen player.</p>
+  <p>
+    <img src="https://img.shields.io/badge/Platform-iOS%2017%2B-blue?style=flat-square&logo=apple&logoColor=white" alt="iOS 17+"/>
+    <img src="https://img.shields.io/badge/Swift-5.9-orange?style=flat-square&logo=swift&logoColor=white" alt="Swift 5.9"/>
+    <img src="https://img.shields.io/badge/Xcode-16%2B-147EFB?style=flat-square&logo=xcode&logoColor=white" alt="Xcode 16"/>
+    <img src="https://img.shields.io/badge/License-Proprietary-red?style=flat-square" alt="License"/>
+  </p>
+</div>
 
 ---
 
@@ -38,7 +48,7 @@ A native iOS remote control for [Kodi](https://kodi.tv) — built to look and fe
 
 ## What it does
 
-Kodi is powerful, but its iOS remotes are either clunky web apps or stripped-down utilities. Kodi Widget bridges the gap: it connects to your Kodi instance over Wi-Fi, polls playback state every second, and presents everything in a fullscreen player that feels at home on iOS 17+.
+Kodi is powerful, but its iOS remotes are either clunky web apps or stripped-down utilities. Podium for Kodi bridges the gap: it connects to your Kodi instance over Wi-Fi, polls playback state every second, and presents everything in a fullscreen player that feels at home on iOS 17+.
 
 The app is purely a **remote** — it doesn't stream video, it just talks to Kodi's JSON-RPC API. Your Kodi box keeps doing the heavy lifting; your iPhone becomes the world's most cinematic remote control.
 
@@ -113,8 +123,8 @@ Kodi's **web interface** must be enabled:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/kodi-widget.git
-cd kodi-widget
+git clone https://github.com/your-username/podium-for-kodi.git
+cd podium-for-kodi
 ```
 
 ### 2. Add your TMDB API key
@@ -124,8 +134,8 @@ The movie info sheet fetches metadata from [The Movie Database](https://develope
 Copy the example credentials file and fill in your key:
 
 ```bash
-cp "Kodi Widget/Resources/credentials.plist.example" \
-   "Kodi Widget/Resources/credentials.plist"
+cp "Podium/Resources/credentials.plist.example" \
+   "Podium/Resources/credentials.plist"
 ```
 
 Then open `credentials.plist` and replace the placeholder:
@@ -140,7 +150,7 @@ Then open `credentials.plist` and replace the placeholder:
 ### 3. Open in Xcode
 
 ```bash
-open "Kodi Widget.xcodeproj"
+open "Podium.xcodeproj"
 ```
 
 Swift Package Manager will automatically resolve the only dependency — **Kingfisher** — on first open.
@@ -155,7 +165,7 @@ On first launch the app will ask you to add a Kodi device. Use **Add Device** to
 ## Project Structure
 
 ```
-Kodi Widget/
+Podium for Kodi/
 ├── ContentView.swift              # Root view; polling loop, environment injection
 ├── FullscreenPlayerView.swift     # The entire player UI (background, artwork, controls, footer)
 ├── SettingsView.swift             # Settings, device picker, add/edit device flows

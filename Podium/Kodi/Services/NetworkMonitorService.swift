@@ -9,7 +9,7 @@ final class NetworkMonitorService: ObservableObject {
     @Published private(set) var isConnectedToWiFi = false
 
     private let monitor = NWPathMonitor()
-    private let queue = DispatchQueue(label: "com.kodiwidget.network-monitor", qos: .utility)
+    private let queue = DispatchQueue(label: "com.thaesler.podium.network-monitor", qos: .utility)
 
     init() {
         monitor.pathUpdateHandler = { [weak self] path in

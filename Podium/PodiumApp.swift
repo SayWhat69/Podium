@@ -3,7 +3,7 @@ import SwiftData
 import Kingfisher
 
 @main
-struct KodiWidgetApp: App {
+struct PodiumApp: App {
 
     init() {
         seedUserDefaults()

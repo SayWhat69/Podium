@@ -19,7 +19,7 @@ struct DiscoveredDevice: Identifiable, Hashable {
 /// as hosts are found.
 @MainActor
 final class NetworkScannerService: ObservableObject {
-    private static let logger = Logger(subsystem: "com.kodiwidget", category: "NetworkScanner")
+    private static let logger = Logger(subsystem: "com.thaesler.podium", category: "NetworkScanner")
     @Published private(set) var devices: [DiscoveredDevice] = []
     @Published private(set) var isScanning: Bool = false
     @Published private(set) var progress: Double = 0

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 118" width="600" height="118">
+  <defs>
+    <linearGradient id="podiumShine" x1="0" y1="18" x2="0" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#C8A8F0"/>
+      <stop offset="45%"  stop-color="#9D4EDD"/>
+      <stop offset="100%" stop-color="#7B2FBE"/>
+    </linearGradient>
+    <linearGradient id="kodiShine" x1="0" y1="82" x2="0" y2="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#B580E8"/>
+      <stop offset="100%" stop-color="#9D4EDD"/>
+    </linearGradient>
+  </defs>
+
+  <text x="300" y="70" text-anchor="middle"
+    font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="100" font-size="66" letter-spacing="22"
+    fill="url(#podiumShine)">PODIUM</text>
+
+  <line x1="148" y1="80" x2="452" y2="80"
+    stroke="#9D4EDD" stroke-width="0.5" opacity="0.35"/>
+
+  <text x="300" y="100" text-anchor="middle"
+    font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="100" font-size="19" letter-spacing="15"
+    fill="url(#kodiShine)" opacity="0.65">FOR KODI</text>
+</svg>
