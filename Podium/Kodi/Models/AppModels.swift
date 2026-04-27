@@ -37,10 +37,12 @@ final class NowPlayingState {
     }
 
     func seekBackward() async {
+        print("Seeking backward by 10 seconds")
         await KodiService.seek(playerId: playerId, to: -10)
     }
 
     func seekForward() async {
+        print("Seeking forward by 10 seconds")
         await KodiService.seek(playerId: playerId, to: 10)
     }
 

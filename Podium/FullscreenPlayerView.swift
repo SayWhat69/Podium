@@ -109,6 +109,11 @@ private struct PlayerArtwork: View {
                     )
                     .frame(width: size.width, height: size.height)
                     .animation(.smooth, value: isPlaying)
+                    .onTapGesture {
+                        if let url = letterboxdURL(for: state.imdbId), UIApplication.shared.canOpenURL(url) {
+                            UIApplication.shared.open(url)
+                        }
+                    }
             } else {
                 let padding: CGFloat = isPlaying ? 48 : 72
                 let posterWidth  = size.width - padding * 2
@@ -122,6 +127,16 @@ private struct PlayerArtwork: View {
                 .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.13), radius: 3, y: 3)
                 .frame(width: size.width, height: size.height)
             }
+        }
+    }
+    
+    /// Returns the Letterboxd URL for an IMDb or TMDB identifier.
+    private func letterboxdURL(for id: String) -> URL? {
+        guard !id.isEmpty else { return nil }
+        if id.hasPrefix("tt") {
+            return URL(string: "https://letterboxd.com/imdb/\(id)/")
+        } else {
+            return URL(string: "https://letterboxd.com/tmdb/\(id)/")
         }
     }
 }
@@ -175,11 +190,6 @@ private struct TrackInfoRow: View {
                     .font(.title3).fontWeight(.semibold)
                     .foregroundStyle(Color(PlayerPalette.opaque))
                     .id(state.title)
-                    .onTapGesture {
-                        if let url = letterboxdURL(for: state.imdbId), UIApplication.shared.canOpenURL(url) {
-                            UIApplication.shared.open(url)
-                        }
-                    }
                 MarqueeText(state.director, config: config)
                     .foregroundStyle(Color(PlayerPalette.opaque))
                     .blendMode(.overlay)
@@ -202,16 +212,6 @@ private struct TrackInfoRow: View {
                 imdbId:       state.imdbId
             )
             .presentationDetents([.medium, .large])
-        }
-    }
-
-    /// Returns the Letterboxd URL for an IMDb or TMDB identifier.
-    private func letterboxdURL(for id: String) -> URL? {
-        guard !id.isEmpty else { return nil }
-        if id.hasPrefix("tt") {
-            return URL(string: "https://letterboxd.com/imdb/\(id)/")
-        } else {
-            return URL(string: "https://letterboxd.com/tmdb/\(id)/")
         }
     }
 }
@@ -351,9 +351,10 @@ struct MovieInfoSheet: View {
                                         KFImage.url(url)
                                             .resizable().scaledToFit()
                                             .frame(height: 18).opacity(0.7)
+                                    } else {
+                                        Text(company.name)
+                                            .font(.caption).foregroundStyle(.secondary)
                                     }
-                                    Text(company.name)
-                                        .font(.caption).foregroundStyle(.secondary)
                                 }
                             }
                         }
@@ -807,7 +808,10 @@ private struct SeekButton: View {
             .animation(.easeInOut(duration: 0.2), value: state.title.isEmpty)
             .simultaneousGesture(
                 DragGesture(minimumDistance: 0)
-                    .onChanged { _ in pressed.toggle() }
+                    .onChanged { _ in
+                        onTap()
+                        pressed.toggle()
+                    }
             )
             .disabled(state.title.isEmpty)
     }
