@@ -65,6 +65,14 @@ private struct PlayerBackground: View {
     @Environment(NowPlayingState.self) private var state
     @State private var colors: [Color] = [Color(hex: 0x1f2937), Color(hex: 0xffffff), Color(hex: 0x17b2e7)]
 
+    private let idleColors: [Color] = [
+        Color(hex: 0x1c1c1e),
+        Color(hex: 0x2c2c2e),
+        Color(hex: 0x3a3a3c),
+        Color(hex: 0x48484a),
+        Color(hex: 0x636366),
+    ]
+
     var body: some View {
         ZStack {
             Rectangle().fill(.thickMaterial)
@@ -76,10 +84,19 @@ private struct PlayerBackground: View {
             guard let url = state.artworkURL,
                   let image = try? await KingfisherManager.shared.retrieveImage(with: url).image,
                   let samples = image.dominantColorsClean()
-            else { return }
+            else {
+                // No artwork — go to idle greys
+                withAnimation(.easeInOut(duration: 1.5)) { colors = idleColors }
+                return
+            }
             let extracted = samples.prefix(5).map { Color($0.color) }
             if !extracted.isEmpty {
                 withAnimation { colors = Array(extracted) }
+            }
+        }
+        .onChange(of: state.isPlaying) {
+            if !state.isPlaying && state.artworkURL == nil {
+                withAnimation(.easeInOut(duration: 1.5)) { colors = idleColors }
             }
         }
     }
