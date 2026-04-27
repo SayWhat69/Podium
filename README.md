@@ -258,6 +258,6 @@ Pull requests are welcome. A few things to keep in mind:
 
 ## License
 
-Copyright (c) 2025 Nico Thäsler. All rights reserved.
+Copyright (c) 2026 Nico Thäsler. All rights reserved.
 
 This project is proprietary and confidential. No part of this source code may be copied, modified, distributed, or used in any form without explicit written permission from the author. See [LICENSE](LICENSE) for full terms.
